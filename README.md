@@ -1,10 +1,8 @@
 # EcoGEx
 
-![](https://img.shields.io/website-up-down-green-red/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
-
 **Ecotype-specific Gene Expression.**
 
-For now you can access this web app here - https://sangram.shinyapps.io/EcoGEx
+For now you can access this web app here - https://sangram.shinyapps.io/EcoGEx ![](https://img.shields.io/website-up-green/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
 
 ### About
 
