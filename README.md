@@ -10,9 +10,9 @@ For now you can access this web app here - https://sangram.shinyapps.io/EcoGEx !
 
 By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expression pattern and Compare.
 
-<img src="./images/map.png" width="400" >
-<img src="./images/stat1.png" width="300" height= '200'>
-<img src="./images/stat2.png" width="300" height= '200'>
+<img src="./images/map.png" width="250"  >
+<img src="./images/stat1.png" width="200" height= '150'>
+<img src="./images/stat2.png" width="200" height= '150'>
 
 --------------
 Data used here are colllected from:
