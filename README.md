@@ -1,6 +1,6 @@
 # EcoGEx
 
-https://img.shields.io/website-up-down-green-red/https/sangram.shinyapps.io/EcoGEx.svg?style=flat
+![](https://img.shields.io/website-up-down-green-red/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
 
 **Ecotype-specific Gene Expression.**
 
