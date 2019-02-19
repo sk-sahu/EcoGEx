@@ -1,15 +1,13 @@
-# EcoGEx : R Package + Web App
-
-**Ecotype-specific Gene Expression **
+## EcoGEx : Ecotype-specific Gene Expression (R Package + Web App)
 
 ![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sk-sahu/EcoGEx.svg?style=flat)
 ![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
 
-**EcoGEx Web instance** - https://sangram.shinyapps.io/EcoGEx 
+**EcoGEx Web instance can be accessed here:** https://sangram.shinyapps.io/EcoGEx 
 
-#### If you want to use it Locally:
+**If you want to use it Locally:**
 
 Install through `install_github` fucntion from `devtools` package
 ```
