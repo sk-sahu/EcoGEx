@@ -14,7 +14,7 @@ By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expre
 
 --------------
 
-We are constaly trying to improve the result visualisation and intigrating more data. Please help us with concerned queries. You can ask for a pull request or raise a issue in the [GitHub Repo]
+We are constaly trying to improve the result visualisation and intigrating more data. Please help us with concerned queries. You can ask for a pull request or raise a issue in the [GitHub Repo.]
 
 --------------
 #### Contact:
@@ -28,4 +28,4 @@ Last update:
 (7/12/2018)
 * v0.6.7 : Download options for graphs and table added.
 
-[GitHub Repo]: (https://github.com/sk-sahu/EcoGEx/)
+[GitHub Repo]: https://github.com/sk-sahu/EcoGEx/
