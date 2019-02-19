@@ -2,7 +2,7 @@
 
 **Ecotype-specific Gene Expression**
 
-For now you can access this web app here - https://sangram.shinyapps.io/EcoGEx ![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
+Web instance - https://sangram.shinyapps.io/EcoGEx ![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
 
 ### About
 
@@ -13,11 +13,8 @@ By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expre
 <img src="./images/EcoGEx_results.png">
 
 --------------
-Data used here are colllected from:
 
-+ [*Arabidopsis 1001genome Project.*](https://1001genomes.org/)
-
-We are constaly trying to improve the result visualisation and intigrating more data. Please help us with concerned queries.
+We are constaly trying to improve the result visualisation and intigrating more data. Please help us with concerned queries. You can ask for a pull request or raise a issue in the [GitHub Repo]
 
 --------------
 #### Contact:
@@ -30,3 +27,5 @@ For any query please [Email](mailto:sangramk@iisermohali.ac.in) on: sangramk@iis
 Last update:
 (7/12/2018)
 * v0.6.7 : Download options for graphs and table added.
+
+[GitHub Repo]: https://github.com/sk-sahu/EcoGEx/
