@@ -10,7 +10,7 @@ Web instance - https://sangram.shinyapps.io/EcoGEx ![](https://img.shields.io/we
 
 By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expression pattern and Compare.
 
-<img src="./images/EcoGEx_results.png">
+<img src="./int/app/images/EcoGEx_results.png">
 
 --------------
 

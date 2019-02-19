@@ -1,30 +1,24 @@
 Package: EcoGEx
+Type: Package
 Title: Ecotype-specific Gene Expression
-Version: 0.6.7
-Date: 2019-02-19
-Authors@R: c(person("Sangram", "Keshari Sahu", role = "aut", email = "sangramk@iisermohali.ac.in"),
-    )
-
-Description: EcoGEx is a web app/tool to find Expression of a Gene across different ecotypes of Arabidopsis and the geographical locations information.
-
-Depends:
-    R (>= 3.6),
-
-Imports:
-    data.table,
+Version: 0.1.0
+Author: Sangram Keshari Sahu
+Maintainer: Sangram Keshari Sahu <sangramk@iisermohali.ac.in>
+Description: Find Expression of a Gene across different ecotypes of Arabidopsis and the geographical locations information.
+Suggests: 
+    testthat,
+    shinytest
+Imports: 
     shiny,
-    maptools,
+    data.table,
     maps,
-    ggmap,
     ggplot2,
     plyr,
-    markdown
-
-Suggests:
-    
-URL: https://sangram.shinyapps.io/EcoGEx
+Remotes:
+    rstudio/shinytest
+URL: https://github.com/sk-sahu/EcoGEx
 BugReports: https://github.com/sk-sahu/EcoGEx
 License: MIT + file LICENSE
-VignetteBuilder: knitr
 Encoding: UTF-8
+LazyData: true
 RoxygenNote: 6.1.1
