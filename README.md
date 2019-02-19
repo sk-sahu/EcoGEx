@@ -4,6 +4,20 @@
 
 Web instance - https://sangram.shinyapps.io/EcoGEx ![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
 
+If you want to use it locally:
+
+Install through `install_github` fucntion from `devtools`
+```
+library(devtools)
+install_github("sk-sahu/EcoGEx")
+```
+To use EcoGEx instance locally:
+
+```
+library(EcoGEx)
+runEcoGEx()
+```
+
 ### About
 
 **Arabidopsis EcoGEx** is a web app/tool to find Expression of a Gene across different ecotypes of Arabidopsis and the geographical locations information.
