@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sk-sahu/EcoGEx.svg?style=flat)
-![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)
+[![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
 
 **EcoGEx Web instance can be accessed here:** https://sangram.shinyapps.io/EcoGEx 
 
@@ -19,7 +19,7 @@ To run EcoGEx instance locally:
 library(EcoGEx)
 runEcoGEx()
 ```
-**Though the app is running properly**, I tried to R CMD check but ![Travis (.org)](https://img.shields.io/travis/sk-sahu/EcoGEx.svg) So if any can help on this matter will be appreciated.
+**Though the app is running properly**, I tried to R CMD check but [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx) So if any can help on this matter will be appreciated.
 
 --------------
 ### About
