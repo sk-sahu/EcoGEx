@@ -1,4 +1,4 @@
-## EcoGEx : Ecotype-specific Gene Expression (R Package + Web App)
+## EcoGEx : Ecotype-specific Gene Expression (R-📦 + 🕸️-App)
 
 ![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/EcoGEx.svg?style=flat)
