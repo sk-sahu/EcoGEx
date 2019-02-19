@@ -3,7 +3,7 @@
 ![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/EcoGEx.svg?style=flat)
 ![GitHub last commit](https://img.shields.io/github/last-commit/sk-sahu/EcoGEx.svg?style=flat)
-[![](https://img.shields.io/website-up-down-green-orange/https/sangram.shinyapps.io/EcoGEx.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
+[![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
 
 **EcoGEx Web instance can be accessed here:** https://sangram.shinyapps.io/EcoGEx 
 
