@@ -6,7 +6,7 @@
 [![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
 
 First of all, **Why this package/app** when one can go over available set of large Excel files and dig out the information?
-Because, recently I came across this tweet of Hadley Wickham, which insipred me to write my first full fledged code (Well, atleast in my mind!).
+Because, I came across this tweet of Hadley Wickham, which insipred me to write my first full fledged code (Well, atleast in my mind!).
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Automate everything that can be automated. I had to work hard to make it easier for others</p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/911992796441083906?ref_src=twsrc%5Etfw">September 24, 2017</a></blockquote>
 
