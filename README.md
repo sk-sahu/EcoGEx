@@ -6,15 +6,15 @@
 [![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
 
 First of all, **Why this package/app** when one can go over available set of large Excel files and dig out the information?
-Because, I came across this tweet of Hadley Wickham, which insipred me to write my first full fledged code (Well, atleast in my mind!).
+Because, recently I came across this tweet of Hadley Wickham, which insipred me to write my first full fledged code (Well, atleast in my mind!).
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Automate everything that can be automated. I had to work hard to make it easier for others</p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/911992796441083906?ref_src=twsrc%5Etfw">September 24, 2017</a></blockquote>
 
 
-And that also mentioned his phillospohy of package development in his book [Introduction to R-packages](http://r-pkgs.had.co.nz/intro.html)
+And this also mentioned as his phillospohy of package development in his book [Introduction to R-packages](http://r-pkgs.had.co.nz/intro.html)
 > Anything that can be automated, should be automated.
 
-I know this code in production is not perfect, but the idea of [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) can lead.
+I know this code in production is not perfect. Most functions are messy and lot of improvements to do, but the idea of [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) can lead.
 
 --------------
 ## Quick Start
@@ -40,8 +40,9 @@ runEcoGEx()
 
 **Arabidopsis EcoGEx** helps to find Expression of a Gene across different ecotypes of Arabidopsis and the geographical locations information.
 
-By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expression pattern and Compare.
+By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expression pattern and Compare. 
 
+Here is an example of some graphical outputs from the results after running the app:
 <img src="./inst/app/images/EcoGEx_results.png">
 
 --------------
