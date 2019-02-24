@@ -25,8 +25,8 @@ I know this code in production is not perfect. Most functions are messy and lot 
 
 Install through `install_github` fucntion from `devtools` package
 ```
-library(devtools)
-install_github("sk-sahu/EcoGEx")
+require(devtools)
+devtools::install_github("sk-sahu/EcoGEx")
 ```
 To run EcoGEx instance locally:
 ```
