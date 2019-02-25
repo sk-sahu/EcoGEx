@@ -47,7 +47,7 @@ Here is an example of some graphical outputs from the results after running the 
 <img src="./inst/app/images/EcoGEx_results.png">
 
 --------------
-#### Contact:
+## Contact
 [Sangram Keshari Sahu](https://sksahu.net) and Prince Saini
 
 For any query please email on: sangramk@iisermohali.ac.in
@@ -55,7 +55,7 @@ For any query please email on: sangramk@iisermohali.ac.in
 Also you can arise a issue here or ask for a pull request.
 
 ---------------
-#### ChangeLog:
+## ChangeLog
 Last update:
 (7/12/2018)
 * v0.6.7 : Download options for graphs and table added.
