@@ -53,7 +53,7 @@ For any query please email on: sangramk@iisermohali.ac.in
 
 Also you can arise a issue here or ask for a pull request.
 
----
+***************
 ## ChangeLog
 Last update:
 (7-12-2018) v0.6.7: Download options for graphs and table added.
