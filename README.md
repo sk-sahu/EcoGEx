@@ -1,5 +1,6 @@
 ## EcoGEx : Ecotype-specific Gene Expression (R-📦 + 🕸️-App)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
 [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/archive/master.zip)
 [![GitHub last commit](https://img.shields.io/github/last-commit/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/)
