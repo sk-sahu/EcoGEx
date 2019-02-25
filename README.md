@@ -11,7 +11,6 @@ Because, recently I came across this tweet of Hadley Wickham, which insipred me 
 
 <blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">Automate everything that can be automated. I had to work hard to make it easier for others</p>&mdash; Hadley Wickham (@hadleywickham) <a href="https://twitter.com/hadleywickham/status/911992796441083906?ref_src=twsrc%5Etfw">September 24, 2017</a></blockquote>
 
-
 And this also mentioned as his phillospohy of package development in his book [Introduction to R-packages](http://r-pkgs.had.co.nz/intro.html)
 > Anything that can be automated, should be automated.
 
@@ -20,12 +19,12 @@ I know this code in production is not perfect. Most functions are messy and lot 
 --------------
 ## Quick Start
 
-**EcoGEx Web instance can be accessed here:** https://sangram.shinyapps.io/EcoGEx 
+**EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx)** 
 
-**If you want to use it Locally:**
+#### If you want to use it Locally
 
 Install through `install_github` fucntion from `devtools` package
-```
+```R
 require(devtools)
 devtools::install_github("sk-sahu/EcoGEx")
 ```
@@ -57,5 +56,5 @@ Also you can arise a issue here or ask for a pull request.
 ---------------
 ## ChangeLog
 Last update:
-(7/12/2018)
-* v0.6.7 : Download options for graphs and table added.
+(7-12-2018)
+* v0.6.7: Download options for graphs and table added.
