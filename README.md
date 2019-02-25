@@ -21,7 +21,7 @@ I know this code in production is not perfect. Most functions are messy and lot 
 
 **EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx)** 
 
-#### If you want to use it Locally
+### If you want to use it Locally
 
 Install through `install_github` fucntion from `devtools` package
 ```R
@@ -29,13 +29,13 @@ require(devtools)
 devtools::install_github("sk-sahu/EcoGEx")
 ```
 To run EcoGEx instance locally:
-```
+```R
 library(EcoGEx)
 runEcoGEx()
 ```
 **Though the app is running properly**, I tried to R CMD check but [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx) So if any can help on this matter will be appreciated.
 
---------
+---
 ## About
 
 **Arabidopsis EcoGEx** helps to find Expression of a Gene across different ecotypes of Arabidopsis and the geographical locations information.
@@ -53,8 +53,7 @@ For any query please email on: sangramk@iisermohali.ac.in
 
 Also you can arise a issue here or ask for a pull request.
 
----------------
+---
 ## ChangeLog
 Last update:
-(7-12-2018)
-* v0.6.7: Download options for graphs and table added.
+(7-12-2018) v0.6.7: Download options for graphs and table added.
