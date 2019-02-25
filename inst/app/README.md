@@ -12,7 +12,7 @@ Here is an example of some graphical outputs from the results after running the 
 <img src="./images/EcoGEx_results.png">
 
 --------------
-#### Contact:
+### Contact
 [Sangram Keshari Sahu](https://sksahu.net) and Prince Saini
 
 For any query please email on: sangramk@iisermohali.ac.in
