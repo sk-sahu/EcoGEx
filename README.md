@@ -1,11 +1,12 @@
 ## EcoGEx : Ecotype-specific Gene Expression (R-📦 + 🕸️-App)
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
-[![GitHub repo size in bytes](https://img.shields.io/github/repo-size/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/archive/master.zip)
-[![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues)
 [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx)
+[![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
+
+If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
 
 First of all, **Why this package/app** when one can go over available set of large Excel files and dig out the information?
 Because, recently I came across this tweet of Hadley Wickham, which insipred me to write my first full fledged code (Well, atleast in my mind!).
@@ -20,11 +21,9 @@ I know this code in production is not perfect. Most functions are messy and lot 
 ***
 ## Quick Start
 
-**EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx)** 
+**EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx)** [![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
 
-### If you want to use it Locally
-
-Install through `install_github` fucntion from `devtools` package
+### Install the package and run the app locally
 ```R
 require(devtools)
 devtools::install_github("sk-sahu/EcoGEx")
@@ -34,7 +33,6 @@ To run EcoGEx instance locally:
 library(EcoGEx)
 runEcoGEx()
 ```
-**Though the app is running properly**, I tried to R CMD check but [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx) So if any can help on this matter will be appreciated.
 
 ***
 ## About
@@ -47,14 +45,6 @@ Here is an example of some graphical outputs from the results after running the 
 <img src="./inst/app/images/EcoGEx_results.png">
 
 ***
-## Contact
-[Sangram Keshari Sahu](https://sksahu.net) and Prince Saini
-
-For any query please email on: sangramk@iisermohali.ac.in
-
-Also you can arise a issue here or ask for a pull request.
-
-***
-## ChangeLog
-Last update:
-(7-12-2018) v0.6.7: Download options for graphs and table added.
+## Issues
+[![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues) 
+**Though the app is running properly**, I tried to R CMD check but [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx) So if any can help on this matter will be appreciated.
