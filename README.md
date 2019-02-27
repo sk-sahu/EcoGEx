@@ -8,6 +8,7 @@
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
 
+***
 First of all, **Why this package/app** when one can go over available set of large Excel files and dig out the information?
 Because, recently I came across this tweet of Hadley Wickham, which insipred me to write my first full fledged code (Well, atleast in my mind!).
 
