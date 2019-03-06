@@ -1,65 +1,65 @@
 library(shiny)
+library(markdown)
 
-ui <- fluidPage(
+ui <- navbarPage("Arabidopsis EcoGEx",
 
-  titlePanel("Arabidopsis EcoGEx 0.6"),
-  br(),
+                 tabPanel("App",
+                          sidebarLayout(
+                            sidebarPanel(
 
-  sidebarLayout(
-    sidebarPanel(
+                              textInput("agi", "Entre your AGI:", value = "AT5G61590"),
+                              (textOutput("warning")),
+                              tags$head(tags$style("#warning{color: red;}")),
+                              helpText("AGI: Arabidopsis Gene Identifier."),
+                              actionButton("find", "Submit"),
+                              helpText("It will take few seconds after submit.")
+                            ),
 
-      textInput("agi", "Entre your AGI:"),
-      helpText("AGI: Arabidopsis Gene Identifier."),
-      helpText("Example: AT5G61590"),
-      actionButton("find", "Find"),
-      helpText("This will take some time to scan your gene.
-               Please be patient once after clicking the Find button."),
-      br(),
-      uiOutput("download_map"),
-      br(),
-      uiOutput("download_table")
-
-      ),
-
-    mainPanel(
-      h3("Ecotype specific Gene Expression", align = "center"),
-      br(),
+                            mainPanel(
+                              h3("Ecotype specific Gene Expression", align = "center"),
+                              br(),
 
 
-      tabsetPanel(type = "tabs",
-                  tabPanel("Interactive Plot",
-                           plotOutput("plot", click = "plot_click",
-                                      height = 300,
-                                      dblclick = "plot_dblclick",
-                                      brush = brushOpts(
-                                        id = "plot_brush",
-                                        resetOnNew = TRUE
-                                      )),
-                           verbatimTextOutput("info"),
-                           plotOutput("hist_plot")
-                  ),
+                              tabsetPanel(type = "tabs",
+                                          tabPanel("Interactive Plot",
+                                                   plotOutput("plot", click = "plot_click",
+                                                              height = 300,
+                                                              dblclick = "plot_dblclick",
+                                                              brush = brushOpts(
+                                                                id = "plot_brush",
+                                                                resetOnNew = TRUE
+                                                              )),
+                                                   uiOutput("download_map"),br(),
+                                                   verbatimTextOutput("info"),
+                                                   plotOutput("hist_plot")
+                                          ),
 
-                  tabPanel("Table", dataTableOutput("table")),
+                                          tabPanel("Table",
+                                                   br(),
+                                                   uiOutput("download_table"),
+                                                   br(),
+                                                   dataTableOutput("table")),
 
-                  tabPanel("Comparison",
-                           uiOutput("dropdown_box1"),
-                           uiOutput("dropdown_box2"),
-                           uiOutput("dropdown_box3"),
-                           plotOutput("bar_plot"),
-                           verbatimTextOutput("value1"),
-                           verbatimTextOutput("value2"),
-                           verbatimTextOutput("value3")
-                  ),
+                                          tabPanel("Comparison",
+                                                   uiOutput("dropdown_box1"),
+                                                   uiOutput("dropdown_box2"),
+                                                   uiOutput("dropdown_box3"),
+                                                   plotOutput("bar_plot"),
+                                                   verbatimTextOutput("value1"),
+                                                   verbatimTextOutput("value2"),
+                                                   verbatimTextOutput("value3")
+                                          )
 
-                  tabPanel("About",
-                           fluidRow(
-                             includeMarkdown("README.md")
-                           )
-                  )
-      ) #tabstPanel ends here
+                              )#tabstPanel ends here
 
-    ) # mainPanel ends here
-  )
+
+
+                            ) # mainPanel ends here
+                          )),
+                 tabPanel("About",
+
+                          includeMarkdown("about.md")
+                 )
 
 )
 
@@ -89,6 +89,13 @@ server <- function(input, output) {
 
       agi_id <- toupper(input$agi)
       gene <- t(expr[agi_id,]) # Making a list with Ecotype_id as row name and corospoding Expression value in one column for given agi_id as header.
+
+      if (all(is.na(gene))){
+        output$warning <- renderText({
+          "Warning: Your entered AGI is not valid/avilable. Enter a correct one."
+        })
+      }
+
       gene_df <- as.data.frame(gene)
       gene_expr <- setDT(gene_df, keep.rownames = TRUE)[] # data table made with Ecotype_id as col 1 and Expression value col 2
       colnames(gene_expr)[1] <- "gene_id"
@@ -121,7 +128,7 @@ server <- function(input, output) {
       #download button (for table)
       output$download_table <- renderUI({
         if(!is.null(input$agi)) {
-          downloadButton("tabledownload", "Download Table")
+          downloadButton("tabledownload", "Download Entire Table")
         }
       })
 
@@ -196,6 +203,8 @@ server <- function(input, output) {
 
       # Priting histogram
       output$hist_plot <- renderPlot({
+        # Warnning solved: https://stackoverflow.com/questions/48462876/shiny-error-in-plot-window-need-finite-xlim-values-on-page-load
+        validate(need(nrow(all_combined)>0, "No data"))
         exp_hist <- hist(all_combined$Gene_expression, col = "cyan3",
                          main = bquote("Gene Expression Value Distribution for" == .(input$agi)),
                          xlab = "Gene Expression",
@@ -247,6 +256,8 @@ server <- function(input, output) {
         barplot_matrix <- rbind(filter_row1, filter_row2, filter_row3)
 
         output$bar_plot <- renderPlot({
+          # Warnning solved: https://stackoverflow.com/questions/48462876/shiny-error-in-plot-window-need-finite-xlim-values-on-page-load
+          validate(need(nrow(barplot_matrix)>0, "Please select a data set"))
           barplot(barplot_matrix$Gene_expression, names.arg = barplot_matrix$Ecotype_name,
                   main = "Comparison of Gene Expression among Accessions",
                   xlab = "Accessions", ylab = "Gene Expression", col = "darkseagreen1")
