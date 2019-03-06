@@ -1,5 +1,6 @@
 ## EcoGEx : Ecotype-specific Gene Expression (R-📦 + 🕸️-App)
 
+[![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx)
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
@@ -33,17 +34,23 @@ runEcoGEx()
 
 ***
 ## About
+Arabidopsis EcoGEx is a shinny web app to find Expression of a Gene across different accessions/strains of Arabidopsis and their geographical locations information of origin.
 
-**Arabidopsis EcoGEx** helps to find Expression of a Gene across different ecotypes of Arabidopsis and the geographical locations information.
-
-By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expression pattern and Compare. 
+By simply using an AGI (Arabidopsis Gene Identifier) you can look at their Expression pattern and also can Compare between diffrent accessions.
 
 Here is an example of some graphical outputs from the results after running the app:
 <img src="./inst/app/images/EcoGEx_results.png">
 
-[![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
+***
+This is an OpenSource project: [GitHub Repo](https://github.com/sk-sahu/EcoGEx/)  
+Even the data used here are from public domain: [1001 Genomes Project](https://1001genomes.org/)
 
-## Issues: 
+So you are welcome to contribute, if you have an idea to improvement or found a bug then please [raise an issue](https://github.com/sk-sahu/EcoGEx/issues) in the projct GitHub Repo.
+
+Or simply email on: sangramk@iisermohali.ac.in
+
+***
+## Current status:
 [![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
