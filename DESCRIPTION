@@ -10,6 +10,7 @@ Suggests:
     shinytest
 Imports: 
     shiny,
+    markdown,
     data.table,
     maps,
     ggplot2,
