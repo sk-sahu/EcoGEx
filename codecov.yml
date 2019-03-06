@@ -1,20 +1,21 @@
-coverage:
-    precision: 2
-    round: down
-    range: "70...100"
+Version: 1.0
 
-    status:
-        project:
-            default:
-                target: auto
-                if_no_uploads: error
+RestoreWorkspace: No
+SaveWorkspace: No
+AlwaysSaveHistory: Default
 
-    patch:
-        default:
-            if_no_uploads: error
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
 
-    changes: true
+RnwWeave: knitr
+LaTeX: pdfLaTeX
 
-comment:
-    layout: "header, diff, changes, suggestions"
-    behavior: default
+AutoAppendNewline: Yes
+StripTrailingWhitespace: Yes
+
+BuildType: Package
+PackageUseDevtools: Yes
+PackageInstallArgs: --no-multiarch --with-keep.source
+PackageRoxygenize: rd,collate,namespace
