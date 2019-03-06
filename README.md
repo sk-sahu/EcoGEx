@@ -1,10 +1,6 @@
 ## EcoGEx : Ecotype-specific Gene Expression (R-📦 + 🕸️-App)
 
-[![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
-[![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues)
 [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx)
-[![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
 
@@ -45,7 +41,9 @@ By simply using AGI (Arabidopsis Gene Identifier) ID you can look at their Expre
 Here is an example of some graphical outputs from the results after running the app:
 <img src="./inst/app/images/EcoGEx_results.png">
 
-***
-## Issues
-[![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues) 
-**Though the app is running properly**, I tried to R CMD check but [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx) So if any can help on this matter will be appreciated.
+[![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
+
+## Issues: 
+[![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues)
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
