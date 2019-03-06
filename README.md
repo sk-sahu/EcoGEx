@@ -2,6 +2,7 @@
 
 [![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx)
+[![codecov](https://codecov.io/gh/sk-sahu/EcoGEx/branch/master/graph/badge.svg)](https://codecov.io/gh/sk-sahu/EcoGEx)
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
 
