@@ -1,65 +1,74 @@
 library(shiny)
 library(markdown)
 
-ui <- navbarPage("Arabidopsis EcoGEx",
+ui <- navbarPage("Arabidopsis EcoGEx", inverse = TRUE, collapsible = TRUE,
 
-                 tabPanel("App",
-                          sidebarLayout(
-                            sidebarPanel(
+           tabPanel("App", icon = icon("play-circle"),
 
+              sidebarLayout(
+                  sidebarPanel(
                               textInput("agi", "Entre your AGI:", value = "AT5G61590"),
+                              helpText("AGI: Arabidopsis Gene Identifier."),
                               (textOutput("warning")),
                               tags$head(tags$style("#warning{color: red;}")),
-                              helpText("AGI: Arabidopsis Gene Identifier."),
-                              actionButton("find", "Submit"),
-                              helpText("It will take few seconds after submit.")
+                              actionButton("find", "Submit",
+                                           icon = icon("angle-double-right")),
+                              helpText("NOTE: It will take few seconds after Submiting.")
                             ),
 
-                            mainPanel(
-                              h3("Ecotype specific Gene Expression", align = "center"),
-                              br(),
+                  mainPanel(h3("Ecotype specific Gene Expression",
+                               align = "center"),
+                            br(),
 
+                            tabsetPanel(type = "tabs",
 
-                              tabsetPanel(type = "tabs",
-                                          tabPanel("Interactive Plot",
-                                                   plotOutput("plot", click = "plot_click",
-                                                              height = 300,
-                                                              dblclick = "plot_dblclick",
-                                                              brush = brushOpts(
-                                                                id = "plot_brush",
-                                                                resetOnNew = TRUE
-                                                              )),
-                                                   uiOutput("download_map"),br(),
-                                                   verbatimTextOutput("info"),
-                                                   plotOutput("hist_plot")
-                                          ),
+                                        # Interactive plot tab UI
+                                        tabPanel("Interactive Plot",
+                                                icon = icon("atlas"),
+                                                plotOutput("plot",
+                                                           click = "plot_click",
+                                                           height = 300,
+                                                           dblclick = "plot_dblclick",
+                                                           brush = brushOpts(
+                                                                      id = "plot_brush",
+                                                                      resetOnNew = TRUE
+                                                                   )
+                                                           ),
+                                                uiOutput("download_map"),
+                                                br(),
+                                                verbatimTextOutput("info"),
+                                                plotOutput("hist_plot")
+                                        ),
 
-                                          tabPanel("Table",
-                                                   br(),
-                                                   uiOutput("download_table"),
-                                                   br(),
-                                                   dataTableOutput("table")),
+                                        # Table Tab UI
+                                        tabPanel("Table", icon = icon("table"),
+                                                br(),
+                                                uiOutput("download_table"),
+                                                br(),
+                                                dataTableOutput("table")
+                                        ),
 
-                                          tabPanel("Comparison",
-                                                   uiOutput("dropdown_box1"),
-                                                   uiOutput("dropdown_box2"),
-                                                   uiOutput("dropdown_box3"),
-                                                   plotOutput("bar_plot"),
-                                                   verbatimTextOutput("value1"),
-                                                   verbatimTextOutput("value2"),
-                                                   verbatimTextOutput("value3")
-                                          )
+                                        # Comparision Tab UI
+                                        tabPanel("Comparison",
+                                                icon = icon("bar-chart-o"),
+                                                uiOutput("dropdown_box1"),
+                                                uiOutput("dropdown_box2"),
+                                                uiOutput("dropdown_box3"),
+                                                plotOutput("bar_plot"),
+                                                verbatimTextOutput("value1"),
+                                                verbatimTextOutput("value2"),
+                                                verbatimTextOutput("value3")
+                                        )
 
-                              )#tabstPanel ends here
+                              ) # tabstPanel ends here
+                      ) # mainPanel ends here
+                  ) # Sidebar pannedl ends here
+              ), # App tabPanel ends here
 
-
-
-                            ) # mainPanel ends here
-                          )),
-                 tabPanel("About",
-
-                          includeMarkdown("about.md")
-                 )
+              tabPanel("About",
+                       icon = icon("info-circle") ,
+                       includeMarkdown("about.md")
+              )
 
 )
 
@@ -79,7 +88,7 @@ server <- function(input, output) {
 
     withProgress(message = 'Processing:', value = 0, {
 
-      incProgress(1/2, detail = paste("Finding your gene")) ###################### Progress step 1
+      incProgress(1/2, detail = paste("Finding your gene")) ##### Progress step 1
 
       # Read data (Time taking step)
       expr <- read.csv("data/GSE80744_gene_expression.csv", sep = "\t", row.names = 1)
@@ -88,7 +97,10 @@ server <- function(input, output) {
       ##### Taking the AGI ID and process the final table (All Primary data) #####
 
       agi_id <- toupper(input$agi)
-      gene <- t(expr[agi_id,]) # Making a list with Ecotype_id as row name and corospoding Expression value in one column for given agi_id as header.
+
+      # Making a list with Ecotype_id as row name and
+      # corospoding Expression value in one column for given agi_id as header.
+      gene <- t(expr[agi_id,])
 
       if (all(is.na(gene))){
         output$warning <- renderText({
@@ -97,7 +109,9 @@ server <- function(input, output) {
       }
 
       gene_df <- as.data.frame(gene)
-      gene_expr <- setDT(gene_df, keep.rownames = TRUE)[] # data table made with Ecotype_id as col 1 and Expression value col 2
+
+      # data table made with Ecotype_id as col 1 and Expression value col 2
+      gene_expr <- setDT(gene_df, keep.rownames = TRUE)[]
       colnames(gene_expr)[1] <- "gene_id"
       all <- merge(x=gene_expr, y=cord, by= "gene_id", all=TRUE)
       all_combined <- na.omit(all)
@@ -106,7 +120,7 @@ server <- function(input, output) {
       top20 <- head(arrange(all_combined, desc(all_combined$Gene_expression)) , n = 20)
       last20 <- tail(arrange(all_combined, desc(all_combined$Gene_expression)) , n = 20)
 
-      incProgress(2/2, detail = paste("Printing results"))  ######################## Progress step 2
+      incProgress(2/2, detail = paste("Printing results"))  ###### Progress step 2
 
       ################ Printing and Downloading table ################
 
@@ -135,12 +149,19 @@ server <- function(input, output) {
       ############## Map Generation, printing and Download ####################
 
       # Generating Map
-      mapWorld <- borders("world", colour="gray50", fill="gray50") # create a layer of borders
-      mp <- ggplot() +   mapWorld + ggtitle(bquote("Ecotype/ Accession specific Gene expression for" == .(input$agi)))
-      mp <- mp+ geom_point(aes(x=all_combined$longitude, y=all_combined$latitude) ,color="blue", size=3)+
+
+      # create a layer of borders
+      mapWorld <- borders("world", colour="gray50", fill="gray50")
+      mp <- ggplot() + mapWorld +
+        ggtitle(bquote(
+          "Ecotype/ Accession specific Gene expression for" == .(input$agi)))
+      mp <- mp+ geom_point(aes(x=all_combined$longitude, y=all_combined$latitude),
+                           color="blue", size=3)+
         coord_cartesian(xlim = ranges$x, ylim = ranges$y, expand = FALSE)
-      mp <- mp+ geom_point(aes(x=top20$longitude, y=top20$latitude) ,color="red", size=3)
-      mp <- mp+ geom_point(aes(x=last20$longitude, y=last20$latitude) ,color="green", size=3)
+      mp <- mp+ geom_point(aes(x=top20$longitude, y=top20$latitude),
+                           color="red", size=3)
+      mp <- mp+ geom_point(aes(x=last20$longitude, y=last20$latitude),
+                           color="green", size=3)
 
       # Printing Map to screen
       output$plot <- renderPlot({
@@ -203,10 +224,11 @@ server <- function(input, output) {
 
       # Priting histogram
       output$hist_plot <- renderPlot({
-        # Warnning solved: https://stackoverflow.com/questions/48462876/shiny-error-in-plot-window-need-finite-xlim-values-on-page-load
+        # Warnning solved: https://stackoverflow.com/questions/48462876
         validate(need(nrow(all_combined)>0, "No data"))
         exp_hist <- hist(all_combined$Gene_expression, col = "cyan3",
-                         main = bquote("Gene Expression Value Distribution for" == .(input$agi)),
+                         main = bquote(
+                           "Gene Expression Value Distribution for" == .(input$agi)),
                          xlab = "Gene Expression",
                          ylab = "In number of Accessions."
         )
@@ -256,16 +278,17 @@ server <- function(input, output) {
         barplot_matrix <- rbind(filter_row1, filter_row2, filter_row3)
 
         output$bar_plot <- renderPlot({
-          # Warnning solved: https://stackoverflow.com/questions/48462876/shiny-error-in-plot-window-need-finite-xlim-values-on-page-load
+          # Warnning solved: https://stackoverflow.com/questions/48462876
           validate(need(nrow(barplot_matrix)>0, "Please select a data set"))
-          barplot(barplot_matrix$Gene_expression, names.arg = barplot_matrix$Ecotype_name,
+          barplot(barplot_matrix$Gene_expression,
+                  names.arg = barplot_matrix$Ecotype_name,
                   main = "Comparison of Gene Expression among Accessions",
                   xlab = "Accessions", ylab = "Gene Expression", col = "darkseagreen1")
         })
 
       })
 
-      ################### After this End of withProgress and observeEvent ################
+      ################### After this End of withProgress and observeEvent #############
 
     }) # withProgress ends here
   })  # observeEvent ends here
