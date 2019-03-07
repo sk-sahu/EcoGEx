@@ -42,11 +42,7 @@ Here is an example of some graphical outputs from the results after running the 
 <img src="./inst/app/images/EcoGEx_results.png">
 
 ***
-This is an OpenSource project: [GitHub Repo](https://github.com/sk-sahu/EcoGEx/)  
-Even the data used here are from public domain: [1001 Genomes Project](https://1001genomes.org/)
-
-So you are welcome to contribute, if you have an idea to improvement or found a bug then please [raise an issue](https://github.com/sk-sahu/EcoGEx/issues) in the projct GitHub Repo.
-
+If you have an idea for improvement or found a bug then please [raise an issue](https://github.com/sk-sahu/EcoGEx/issues).  
 Or simply email on: sangramk@iisermohali.ac.in
 
 ***
