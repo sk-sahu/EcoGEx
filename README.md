@@ -19,7 +19,7 @@ I know this code in production is not perfect. Most functions are messy and lot 
 ***
 ## Quick Start
 
-**EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx)** [![](https://img.shields.io/website-up-down-green-orange/https/sksahu.net/.svg?style=flat)](https://sangram.shinyapps.io/EcoGEx)
+### EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx) [![](https://img.shields.io/badge/Web_App-Active_and_Runing-Green.svg)](https://sangram.shinyapps.io/EcoGEx/)
 
 ### Install the package and run the app locally
 ```R
