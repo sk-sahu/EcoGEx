@@ -1,6 +1,5 @@
 ## EcoGEx : Ecotype-specific Gene Expression (R-📦 + 🕸️-App)
 
-[![GitHub](https://img.shields.io/github/license/sk-sahu/EcoGEx.svg?style=flat)](https://github.com/sk-sahu/EcoGEx/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/sk-sahu/EcoGEx.svg?branch=master)](https://travis-ci.org/sk-sahu/EcoGEx)
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
@@ -46,9 +45,4 @@ If you have an idea for improvement or found a bug then please [raise an issue](
 Or simply email on: sangramk@iisermohali.ac.in
 
 ***
-## Current status:
-[![GitHub issues](https://img.shields.io/github/issues/sk-sahu/ecogex.svg)](https://github.com/sk-sahu/EcoGEx/issues)
-
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d09f0b3522d74ed58661fff41610c740)](https://app.codacy.com/app/sk-sahu/EcoGEx?utm_source=github.com&utm_medium=referral&utm_content=sk-sahu/EcoGEx&utm_campaign=Badge_Grade_Dashboard)
-
-![Libraries.io dependency status for GitHub repo](https://img.shields.io/librariesio/github/sk-sahu/EcoGEx.svg)
