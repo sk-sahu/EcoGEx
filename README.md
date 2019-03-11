@@ -8,7 +8,7 @@ If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](
 
 ### EcoGEx Web instance can be accessed - [here](https://sangram.shinyapps.io/EcoGEx) [![](https://img.shields.io/badge/Web_App-Active_and_Runing-Green.svg)](https://sangram.shinyapps.io/EcoGEx/)
 
-### Install the package and run the app locally
+### Install the package and run the shiny app locally
 ```R
 require(devtools)
 devtools::install_github("sk-sahu/EcoGEx")
