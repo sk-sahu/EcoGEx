@@ -1,14 +1,12 @@
 library(shiny)
-library(shinyFeedback)
 library(markdown)
 
 ui <- navbarPage("Arabidopsis EcoGEx", inverse = TRUE, collapsible = TRUE,
 
-           tabPanel("App", icon = icon("play-circle"),
+                 tabPanel("App", icon = icon("play-circle"),
 
-              sidebarLayout(
-                  sidebarPanel(
-                    useShinyFeedback(),
+                          sidebarLayout(
+                            sidebarPanel(
                               textInput("agi", "Entre your AGI:", value = "AT5G61590"),
                               helpText("AGI: Arabidopsis Gene Identifier."),
                               (textOutput("warning")),
@@ -18,59 +16,59 @@ ui <- navbarPage("Arabidopsis EcoGEx", inverse = TRUE, collapsible = TRUE,
                               helpText("NOTE: It will take few seconds after Submiting.")
                             ),
 
-                  mainPanel(h3("Ecotype specific Gene Expression",
-                               align = "center"),
-                            br(),
+                            mainPanel(h3("Ecotype specific Gene Expression",
+                                         align = "center"),
+                                      br(),
 
-                            tabsetPanel(type = "tabs",
+                                      tabsetPanel(type = "tabs",
 
-                                        # Interactive plot tab UI
-                                        tabPanel("Interactive Plot",
-                                                icon = icon("atlas"),
-                                                plotOutput("plot",
-                                                           click = "plot_click",
-                                                           height = 300,
-                                                           dblclick = "plot_dblclick",
-                                                           brush = brushOpts(
-                                                                      id = "plot_brush",
-                                                                      resetOnNew = TRUE
-                                                                   )
+                                                  # Interactive plot tab UI
+                                                  tabPanel("Interactive Plot",
+                                                           icon = icon("atlas"),
+                                                           plotOutput("plot",
+                                                                      click = "plot_click",
+                                                                      height = 300,
+                                                                      dblclick = "plot_dblclick",
+                                                                      brush = brushOpts(
+                                                                        id = "plot_brush",
+                                                                        resetOnNew = TRUE
+                                                                      )
                                                            ),
-                                                uiOutput("download_map"),
-                                                br(),
-                                                verbatimTextOutput("info"),
-                                                plotOutput("hist_plot")
-                                        ),
+                                                           uiOutput("download_map"),
+                                                           br(),
+                                                           verbatimTextOutput("info"),
+                                                           plotOutput("hist_plot")
+                                                  ),
 
-                                        # Table Tab UI
-                                        tabPanel("Table", icon = icon("table"),
-                                                br(),
-                                                uiOutput("download_table"),
-                                                br(),
-                                                dataTableOutput("table")
-                                        ),
+                                                  # Table Tab UI
+                                                  tabPanel("Table", icon = icon("table"),
+                                                           br(),
+                                                           uiOutput("download_table"),
+                                                           br(),
+                                                           dataTableOutput("table")
+                                                  ),
 
-                                        # Comparision Tab UI
-                                        tabPanel("Comparison",
-                                                icon = icon("bar-chart-o"),
-                                                uiOutput("dropdown_box1"),
-                                                uiOutput("dropdown_box2"),
-                                                uiOutput("dropdown_box3"),
-                                                plotOutput("bar_plot"),
-                                                verbatimTextOutput("value1"),
-                                                verbatimTextOutput("value2"),
-                                                verbatimTextOutput("value3")
-                                        )
+                                                  # Comparision Tab UI
+                                                  tabPanel("Comparison",
+                                                           icon = icon("bar-chart-o"),
+                                                           uiOutput("dropdown_box1"),
+                                                           uiOutput("dropdown_box2"),
+                                                           uiOutput("dropdown_box3"),
+                                                           plotOutput("bar_plot"),
+                                                           verbatimTextOutput("value1"),
+                                                           verbatimTextOutput("value2"),
+                                                           verbatimTextOutput("value3")
+                                                  )
 
-                              ) # tabstPanel ends here
-                      ) # mainPanel ends here
-                  ) # Sidebar pannedl ends here
-              ), # App tabPanel ends here
+                                      ) # tabstPanel ends here
+                            ) # mainPanel ends here
+                          ) # Sidebar pannedl ends here
+                 ), # App tabPanel ends here
 
-              tabPanel("About",
-                       icon = icon("info-circle") ,
-                       includeMarkdown("about.md")
-              )
+                 tabPanel("About",
+                          icon = icon("info-circle") ,
+                          includeMarkdown("about.md")
+                 )
 
 )
 
@@ -83,15 +81,6 @@ library(ggplot2)
 library(plyr)
 
 server <- function(input, output) {
-
-  observeEvent(input$agi, {
-    feedbackWarning(
-      "agi",
-      condition = !grepl("[Aa][Tt][1-5][Gg]\\d\\d\\d\\d\\d",
-                         input$agi),
-      text = "Not an AGI"
-    )
-  })
 
   ranges <- reactiveValues(x = NULL, y = NULL)
 
