@@ -2,6 +2,7 @@
 
 [![Build Status](https://img.shields.io/travis/sk-sahu/EcoGEx.svg?logo=travis)](https://travis-ci.org/sk-sahu/EcoGEx)
 [![GitHub release](https://img.shields.io/github/release-pre/sk-sahu/EcoGEx.svg?logo=github&logoColor=white)](https://github.com/sk-sahu/EcoGEx/releases)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsk-sahu%2FEcoGEx.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsk-sahu%2FEcoGEx?ref=badge_shield)
 
 If this helps you please cite: [![DOI](https://zenodo.org/badge/171301910.svg)](https://zenodo.org/badge/latestdoi/171301910)
 
@@ -48,3 +49,7 @@ And this also mentioned as his phillospohy of package development in his book [I
 I know this code in production is not perfect. Most functions are messy and lot of improvements to do, but the idea of [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product) can lead.
 
 ***
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fsk-sahu%2FEcoGEx.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fsk-sahu%2FEcoGEx?ref=badge_large)
